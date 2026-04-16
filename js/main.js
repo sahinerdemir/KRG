@@ -1,3 +1,21 @@
+// ===== SMOOTH SCROLL (Lenis) =====
+let lenis = null;
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (window.Lenis && !prefersReduced) {
+  lenis = new Lenis({
+    duration: 1.15,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    smoothTouch: false,
+    wheelMultiplier: 1,
+    touchMultiplier: 1.5,
+  });
+
+  const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
+  requestAnimationFrame(raf);
+}
+
 // ===== NAV SCROLL =====
 const nav = document.querySelector('.nav');
 let lastScroll = 0;
@@ -122,8 +140,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (!target) return;
     e.preventDefault();
     const offset = 80;
-    const y = target.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    if (lenis) {
+      lenis.scrollTo(target, { offset: -offset, duration: 1.4 });
+    } else {
+      const y = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
     if (nav.classList.contains('open')) nav.classList.remove('open');
   });
 });
