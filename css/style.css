@@ -144,15 +144,12 @@ img { max-width: 100%; display: block; }
 }
 .logo:hover { opacity: 0.85; }
 .logo-img {
-  height: 60px;
-  width: 220px;
+  height: 42px;
+  width: auto;
   display: block;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 6px;
-  transition: height 0.3s var(--ease), width 0.3s var(--ease);
+  transition: height 0.3s var(--ease);
 }
-.nav.scrolled .logo-img { height: 48px; width: 180px; }
+.nav.scrolled .logo-img { height: 34px; }
 
 .nav-links {
   display: flex;
@@ -274,7 +271,7 @@ img { max-width: 100%; display: block; }
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
   }
-  .logo-img { height: 44px; }
+  .logo-img { height: 32px; }
 }
 
 /* ========== HERO ========== */
@@ -1083,11 +1080,8 @@ img { max-width: 100%; display: block; }
 }
 .footer-logo:hover { opacity: 1; }
 .footer-logo-img {
-  height: 55px;
-  width: 200px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 6px;
+  height: 40px;
+  width: auto;
 }
 .footer-tagline {
   color: var(--text-dim);
