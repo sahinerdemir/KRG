@@ -43,8 +43,19 @@ python3 -m http.server 8080
 
 ## Design notes
 
-- Hero: animated gradient orbs + grid overlay + animated marquee of tech keywords
-- Scroll reveals via `.reveal` / `.reveal-left` / `.reveal-right` classes — IntersectionObserver adds `.visible`
+**Brand palette** (from krgnow.com — these are non-negotiable):
+- Navy `#192537` — primary background (original brand bg)
+- White `#FFFFFF` — primary text
+- Gold `#C4A57B` — accent, derived from the crown in the KRG logo
+- Extended navy (`#0c121c`, `#111a27`, `#213049`) and gold (`#d4b890`, `#e2cba8`) shades are layered variations of the brand colors — used only for depth, glow, and gradient transitions, never to introduce a new hue.
+
+**Typography**: Cormorant Garamond (serif, for headings — reflects the serif wordmark in the logo) + Inter (body) + Space Grotesk (micro labels).
+
+**Logo**: downloaded from the original site (`assets/logo.png`, 1330×1330). Displayed with `object-fit: cover` in a wide container so the centered wordmark is visible without the square padding. Also used as favicon.
+
+**Other**:
+- Hero: animated gradient orbs (gold + steel-blue) + grid overlay + marquee of tech keywords
+- Scroll reveals via `.reveal` / `.reveal-left` / `.reveal-right` — IntersectionObserver adds `.visible`
 - Stat counter animation fires when `.stat` enters viewport
 - Custom cursor (dot + trailing ring) hidden on screens < 901px
 - Award section has conic-gradient rotating glow on the trophy card
