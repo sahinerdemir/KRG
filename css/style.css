@@ -370,15 +370,6 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
-.hero-crown {
-  color: var(--gold-500);
-  width: 200px;
-  margin: 0 auto 1.75rem;
-  opacity: 0.9;
-  filter: drop-shadow(0 0 20px var(--gold-glow));
-}
-.hero-crown svg { width: 100%; height: auto; }
-
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -515,7 +506,6 @@ img { max-width: 100%; display: block; }
 .hero-marquee:hover .marquee-track { animation-play-state: paused; }
 
 @media (max-width: 700px) {
-  .hero-crown { width: 150px; }
   .marquee-track { font-size: 0.75rem; }
   .marquee-group { gap: 1.5rem; padding-right: 1.5rem; }
 }
