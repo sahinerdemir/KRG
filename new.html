@@ -88,6 +88,84 @@
       font-size: 0.95rem;
       line-height: 1.7;
     }
+
+    /* How We Work Section */
+    .how-we-work {
+      padding: 8rem 0;
+      border-top: 1px solid var(--border);
+      background: var(--navy-900);
+      position: relative;
+    }
+    .work-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+    .work-header .section-label {
+      justify-content: center;
+      display: inline-flex;
+    }
+    .work-quote {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1rem, 1.3vw, 1.25rem);
+      color: var(--accent);
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+      line-height: 1.6;
+      font-style: italic;
+      opacity: 0.9;
+    }
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 1024px) {
+      .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .work-card {
+      padding: 2.5rem 2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: all 0.4s var(--ease);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+    .work-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-strong);
+      background: var(--surface-2);
+    }
+    .work-card .step-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .work-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+    .work-card p {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
   </style>
 </head>
 <body>
@@ -307,6 +385,54 @@
     </div>
   </section>
 
+  <!-- HOW WE WORK -->
+  <section class="how-we-work" id="how-we-work">
+    <div class="container">
+      <div class="work-header">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span data-i18n="new.work.label">HOW WE WORK</span>
+        </div>
+        <h2 class="section-title reveal" data-i18n="new.work.title">
+          A Consultative Approach to Recruiting
+        </h2>
+        <p class="work-quote reveal" data-i18n="new.work.quote">
+          "Our goal isn't to send the most candidates. It's to introduce the right candidates."
+        </p>
+      </div>
+
+      <div class="work-grid">
+        <!-- Step 1 -->
+        <div class="work-card reveal">
+          <span class="step-num">01</span>
+          <h3 data-i18n="new.work.c1.title">Cultural Fit</h3>
+          <p data-i18n="new.work.c1.desc">Learning your culture, leadership style, and long-term goals.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="work-card reveal">
+          <span class="step-num">02</span>
+          <h3 data-i18n="new.work.c2.title">True Partnership</h3>
+          <p data-i18n="new.work.c2.desc">Working collaboratively with hiring managers and HR partners.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="work-card reveal">
+          <span class="step-num">03</span>
+          <h3 data-i18n="new.work.c3.title">Structured Vetting</h3>
+          <p data-i18n="new.work.c3.desc">Evaluating candidates against your strict criteria through structured interviews.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="work-card reveal">
+          <span class="step-num">04</span>
+          <h3 data-i18n="new.work.c4.title">Immediate Impact</h3>
+          <p data-i18n="new.work.c4.desc">Presenting only candidates capable of making an immediate impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- INDUSTRIES / PRACTICE AREAS -->
   <section class="industries" id="industries">
     <div class="container">
@@ -455,11 +581,11 @@
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Custom cursor hover effect for practice cards in new.html
+    // Custom cursor hover effect for practice and work cards in new.html
     document.addEventListener('DOMContentLoaded', () => {
       const ring = document.querySelector('.cursor-ring');
       if (ring) {
-        document.querySelectorAll('.practice-card').forEach(el => {
+        document.querySelectorAll('.practice-card, .work-card').forEach(el => {
           el.addEventListener('mouseenter', () => ring.classList.add('hover'));
           el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
         });
