@@ -12,6 +12,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Hero typography and tags overrides */
+    .hero-title {
+      font-size: clamp(2.25rem, 5vw, 4.5rem);
+      line-height: 1.1;
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+    }
+    .hero-tags {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 auto 3rem;
+      max-width: 800px;
+    }
+  </style>
 </head>
 <body>
 
@@ -66,34 +83,25 @@
     </div>
 
     <div class="hero-content">
-      <div class="hero-badge reveal">
-        <span class="badge-dot"></span>
-        <span data-i18n="hero.badge">2025 Best Solo Performance Award Winner</span>
-      </div>
-
       <h1 class="hero-title">
-        <span class="hero-line reveal-line"><span data-i18n="hero.title1">Elite talent.</span></span>
-        <span class="hero-line reveal-line"><span class="gradient-text" data-i18n="hero.title2">Delivered with precision.</span></span>
+        <span class="hero-line reveal-line"><span data-i18n="new.hero.title1">Delivering Critical Initiatives,</span></span>
+        <span class="hero-line reveal-line"><span class="gradient-text" data-i18n="new.hero.title2">Not Just Filling Vacancies.</span></span>
       </h1>
 
-      <p class="hero-subtitle reveal" data-i18n="hero.subtitle">
-        Two decades of IT, healthcare technology and executive search. A trusted network that fills critical roles fast — and does it right the first time.
+      <p class="hero-subtitle reveal" data-i18n="new.hero.subtitle">
+        Trusted recruiting advisor to healthcare leaders since 2007. Specializing in executive search, direct hire, and staff augmentation.
       </p>
+
+      <div class="hero-tags reveal">
+        <span class="tag" data-i18n="new.hero.tag1">Hospital Systems</span>
+        <span class="tag" data-i18n="new.hero.tag2">Healthcare Tech</span>
+        <span class="tag" data-i18n="new.hero.tag3">PE-Backed Healthcare</span>
+        <span class="tag" data-i18n="new.hero.tag4">Executive Search</span>
+      </div>
 
       <div class="hero-cta reveal">
         <a href="#services" class="btn btn-primary" data-i18n="hero.cta1">Explore services <span class="arrow">→</span></a>
         <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Get in touch</a>
-      </div>
-    </div>
-
-    <div class="hero-marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <div class="marquee-group">
-          <span>EHR</span><span>✦</span><span>RCM</span><span>✦</span><span>HL7 INTEGRATION</span><span>✦</span><span>HEALTHCARE DATA ENGINEERING</span><span>✦</span><span>EXECUTIVE SEARCH</span><span>✦</span><span>AUTONOMOUS VEHICLES</span><span>✦</span><span>EMERGING TECH</span>
-        </div>
-        <div class="marquee-group">
-          <span>EHR</span><span>✦</span><span>RCM</span><span>✦</span><span>HL7 INTEGRATION</span><span>✦</span><span>HEALTHCARE DATA ENGINEERING</span><span>✦</span><span>EXECUTIVE SEARCH</span><span>✦</span><span>AUTONOMOUS VEHICLES</span><span>✦</span><span>EMERGING TECH</span>
-        </div>
       </div>
     </div>
   </section>
