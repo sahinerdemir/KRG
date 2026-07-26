@@ -1,4 +1,4 @@
-# Key Resource Group — Website
+# Key Resource Group, Website
 
 Modern multilingual redesign of [krgnow.com](https://www.krgnow.com/).
 
