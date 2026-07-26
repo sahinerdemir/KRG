@@ -7,7 +7,7 @@ const translations = {
     "nav.contact": "Contact",
     "nav.cta": "Start a search",
 
-    "hero.badge": "2025 \"Best Solo Performance\" Award Winner",
+    "hero.badge": "2025 Best Solo Performance Award Winner",
     "hero.title1": "Elite talent.",
     "hero.title2": "Delivered with precision.",
     "hero.subtitle": "Two decades of IT, healthcare technology and executive search. A trusted network that fills critical roles fast — and does it right the first time.",
@@ -101,7 +101,7 @@ const translations = {
     "nav.contact": "Contacto",
     "nav.cta": "Iniciar búsqueda",
 
-    "hero.badge": "Ganador del Premio \"Mejor Actuación Individual\" 2025",
+    "hero.badge": "Ganador del Premio Mejor Actuación Individual 2025",
     "hero.title1": "Talento de élite.",
     "hero.title2": "Entregado con precisión.",
     "hero.subtitle": "Dos décadas de búsqueda en TI, tecnología sanitaria y puestos ejecutivos. Una red de confianza que cubre puestos críticos rápido — y lo hace bien a la primera.",
@@ -195,7 +195,7 @@ const translations = {
     "nav.contact": "Contato",
     "nav.cta": "Iniciar busca",
 
-    "hero.badge": "Vencedor do Prêmio \"Melhor Performance Individual\" 2025",
+    "hero.badge": "Vencedor do Prêmio Melhor Performance Individual 2025",
     "hero.title1": "Talento de elite.",
     "hero.title2": "Entregue com precisão.",
     "hero.subtitle": "Duas décadas de recrutamento em TI, tecnologia em saúde e executivos. Uma rede de confiança que preenche vagas críticas rápido — e faz certo na primeira vez.",
