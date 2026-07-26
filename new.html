@@ -166,6 +166,47 @@
       font-size: 0.9rem;
       line-height: 1.65;
     }
+
+    /* Why Clients Partner With Us Value Grid */
+    .value-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+    @media (max-width: 600px) {
+      .value-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .value-item h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .value-item p {
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* 2-Column Partners Grid */
+    .new-partners-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .new-partners-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -320,17 +361,32 @@
         <div class="about-left">
           <div class="section-label reveal">
             <span class="label-line"></span>
-            <span data-i18n="about.label">ABOUT KRG</span>
+            <span data-i18n="new.why.label">WHY WORK WITH US</span>
           </div>
           <h2 class="section-title reveal">
-            <span data-i18n="about.title1">20 years of</span><br>
-            <span class="gradient-text" data-i18n="about.title2">trusted recruiting.</span>
+            <span data-i18n="new.why.title1">Why clients</span><br>
+            <span class="gradient-text" data-i18n="new.why.title2">partner with us.</span>
           </h2>
         </div>
         <div class="about-right">
-          <p class="about-lead reveal" data-i18n="about.lead">
-            Key Resource Group is led by a 20-year veteran of the IT recruiting community. We selectively and quickly fill critical openings through a trusted, hand-built network — across technology, healthcare, executive leadership, and emerging industries.
-          </p>
+          <div class="value-grid reveal">
+            <div class="value-item">
+              <h3 data-i18n="new.why.v1.title">Nearly 20 Years in Healthcare</h3>
+              <p data-i18n="new.why.v1.desc">Deep-rooted industry knowledge since 2007.</p>
+            </div>
+            <div class="value-item">
+              <h3 data-i18n="new.why.v2.title">Founder-Led Service</h3>
+              <p data-i18n="new.why.v2.desc">Every search is directly handled by the founder—no outsourcing, no junior handoffs.</p>
+            </div>
+            <div class="value-item">
+              <h3 data-i18n="new.why.v3.title">Scalable Engagement</h3>
+              <p data-i18n="new.why.v3.desc">Flexible models from single strategic hires to large-scale staff augmentation.</p>
+            </div>
+            <div class="value-item">
+              <h3 data-i18n="new.why.v4.title">Responsive & Low Overhead</h3>
+              <p data-i18n="new.why.v4.desc">Long-term relationship commitment over transactional placements.</p>
+            </div>
+          </div>
           <div class="about-founder reveal">
             <div class="founder-photo">
               <img src="assets/krg-team.png" alt="Kyle Cravens — Founder & CEO of Key Resource Group" width="643" height="595" />
@@ -484,22 +540,18 @@
           <span data-i18n="partners.label">STRATEGIC PARTNERS</span>
         </div>
         <h2 class="section-title reveal" style="margin-bottom: 3rem;">
-          <span data-i18n="partners.title1">Three networks.</span>
-          <span class="gradient-text" data-i18n="partners.title2">One unfair advantage.</span>
+          <span data-i18n="new.partners.title1">Two networks.</span>
+          <span class="gradient-text" data-i18n="new.partners.title2">One unfair advantage.</span>
         </h2>
-        <div class="partners-grid">
-          <div class="partner">
-            <div class="partner-name">HireArt</div>
-            <div class="partner-desc" data-i18n="partners.p1">Emerging Tech &amp; Autonomous Vehicle focus</div>
-          </div>
+        <div class="new-partners-grid">
           <div class="partner">
             <div class="partner-name">BOSS</div>
-            <div class="partner-desc" data-i18n="partners.p2">Back Office Staffing Solutions — payroll, compliance, scalable support</div>
+            <div class="partner-desc" data-i18n="new.partners.p1.desc">Powering our W-2 Staff Augmentation, payroll, and compliance infrastructure.</div>
           </div>
           <div class="partner featured-partner">
             <div class="partner-badge" data-i18n="partners.p3.badge">NEW</div>
             <div class="partner-name">Top Echelon</div>
-            <div class="partner-desc" data-i18n="partners.p3">National recruiter network — shared candidates, shared reach</div>
+            <div class="partner-desc" data-i18n="new.partners.p2.desc">National Recruiter Network providing expanded candidate reach.</div>
           </div>
         </div>
 
