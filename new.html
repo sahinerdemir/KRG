@@ -28,6 +28,66 @@
       margin: 0 auto 3rem;
       max-width: 800px;
     }
+
+    /* Practice Areas grid and card layouts */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 900px) {
+      .practice-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .practice-card {
+      padding: 3rem 2.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: all 0.4s var(--ease);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+    .practice-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-strong);
+      background: var(--surface-2);
+    }
+    .practice-card .card-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .practice-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+      color: var(--white);
+    }
+    .practice-card .card-subtitle {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    .practice-card p {
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
   </style>
 </head>
 <body>
@@ -259,44 +319,43 @@
     </div>
   </section>
 
-  <!-- INDUSTRIES -->
+  <!-- INDUSTRIES / PRACTICE AREAS -->
   <section class="industries" id="industries">
     <div class="container">
       <div class="industries-header">
         <div class="section-label reveal">
           <span class="label-line"></span>
-          <span data-i18n="industries.label">INDUSTRIES</span>
+          <span data-i18n="new.industries.label">PRACTICE AREAS</span>
         </div>
         <h2 class="section-title reveal">
-          <span data-i18n="industries.title1">Where we</span>
-          <span class="gradient-text" data-i18n="industries.title2">make impact.</span>
+          <span data-i18n="new.industries.title1">Where we</span>
+          <span class="gradient-text" data-i18n="new.industries.title2">make impact.</span>
         </h2>
       </div>
-      <div class="industries-list">
-        <div class="industry-row reveal-row">
-          <span class="industry-num">01</span>
-          <span class="industry-name" data-i18n="industries.i1">Healthcare</span>
-          <span class="industry-tag" data-i18n="industries.i1tag">EHR · RCM · HL7</span>
+
+      <div class="practice-grid">
+        <!-- Card 1 -->
+        <div class="practice-card reveal">
+          <span class="card-num">01</span>
+          <div class="card-subtitle" data-i18n="new.industries.c1.sub">Executive & Operations</div>
+          <h3 data-i18n="new.industries.c1.title">Hospital Systems & Networks</h3>
+          <p data-i18n="new.industries.c1.desc">Leadership, clinical operations, and strategic growth roles for health systems.</p>
         </div>
-        <div class="industry-row reveal-row">
-          <span class="industry-num">02</span>
-          <span class="industry-name" data-i18n="industries.i2">Emerging Technology</span>
-          <span class="industry-tag" data-i18n="industries.i2tag">Award-winning</span>
+
+        <!-- Card 2 -->
+        <div class="practice-card reveal">
+          <span class="card-num">02</span>
+          <div class="card-subtitle" data-i18n="new.industries.c2.sub">Product & Integration</div>
+          <h3 data-i18n="new.industries.c2.title">Healthcare Technology & SaaS</h3>
+          <p data-i18n="new.industries.c2.desc">Talent across EHR, RCM, HL7/data integration, health-tech SaaS, and digital health.</p>
         </div>
-        <div class="industry-row reveal-row">
-          <span class="industry-num">03</span>
-          <span class="industry-name" data-i18n="industries.i3">Autonomous Vehicles</span>
-          <span class="industry-tag" data-i18n="industries.i3tag">Next-gen mobility</span>
-        </div>
-        <div class="industry-row reveal-row">
-          <span class="industry-num">04</span>
-          <span class="industry-name" data-i18n="industries.i4">Hospitality</span>
-          <span class="industry-tag" data-i18n="industries.i4tag">Leadership & ops</span>
-        </div>
-        <div class="industry-row reveal-row">
-          <span class="industry-num">05</span>
-          <span class="industry-name" data-i18n="industries.i5">Finance & Operations</span>
-          <span class="industry-tag" data-i18n="industries.i5tag">Executive roles</span>
+
+        <!-- Card 3 -->
+        <div class="practice-card reveal">
+          <span class="card-num">03</span>
+          <div class="card-subtitle" data-i18n="new.industries.c3.sub">M&A & Rapid Scale</div>
+          <h3 data-i18n="new.industries.c3.title">PE-Backed Healthcare</h3>
+          <p data-i18n="new.industries.c3.desc">High-impact leadership and technical teams for private equity-backed healthcare organizations.</p>
         </div>
       </div>
     </div>
@@ -407,5 +466,17 @@
   <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // Custom cursor hover effect for practice cards in new.html
+    document.addEventListener('DOMContentLoaded', () => {
+      const ring = document.querySelector('.cursor-ring');
+      if (ring) {
+        document.querySelectorAll('.practice-card').forEach(el => {
+          el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+          el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+        });
+      }
+    });
+  </script>
 </body>
 </html>
