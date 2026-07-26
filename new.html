@@ -207,6 +207,41 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Founder profile LinkedIn & tagline styles */
+    .founder-tagline {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .founder-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1.2rem;
+      background: rgba(196, 165, 123, 0.08);
+      border: 1px solid rgba(196, 165, 123, 0.3);
+      border-radius: 999px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.3s var(--ease);
+    }
+    .founder-linkedin:hover {
+      background: var(--accent);
+      color: var(--navy-800);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .linkedin-icon {
+      width: 16px;
+      height: 16px;
+    }
   </style>
 </head>
 <body>
@@ -389,14 +424,20 @@
           </div>
           <div class="about-founder reveal">
             <div class="founder-photo">
-              <img src="assets/krg-team.png" alt="Kyle Cravens — Founder & CEO of Key Resource Group" width="643" height="595" />
+              <img src="assets/krg-team.png" alt="Kyle Cravens — Founder of Key Resource Group" width="643" height="595" />
             </div>
             <div class="founder-info">
               <div class="founder-name">Kyle Cravens</div>
-              <div class="founder-role" data-i18n="about.founder.role">Founder & CEO • 20+ years of recruiting experience</div>
-              <div class="founder-quote" data-i18n="about.founder.quote">
-                "Recruiting is a relationship business. We show up, we listen, and we deliver the right person — not just any person."
+              <div class="founder-role" data-i18n="about.founder.role">Founder | Healthcare Recruiting: Operations & Technical</div>
+              <div class="founder-tagline" data-i18n="about.founder.tagline">
+                Helping Healthcare Leaders Hire Exceptional Talent Through Executive Search & Staff Augmentation | Since 2007
               </div>
+              <a href="https://www.linkedin.com/in/kylecravens/" target="_blank" rel="noopener noreferrer" class="founder-linkedin">
+                <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span data-i18n="about.founder.linkedin">View LinkedIn Profile</span>
+              </a>
             </div>
           </div>
         </div>
