@@ -265,6 +265,65 @@
       width: 16px;
       height: 16px;
     }
+
+    /* Moving Radial Lights Background for About Section */
+    .about {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy-800);
+    }
+    .about::before {
+      content: '';
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(196, 165, 123, 0.045) 0%, rgba(58, 85, 128, 0.05) 40%, transparent 70%);
+      top: -10%;
+      left: 10%;
+      filter: blur(80px);
+      pointer-events: none;
+      animation: smoothGlowMove 25s ease-in-out infinite alternate;
+      z-index: 1;
+    }
+    .about::after {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(58, 85, 128, 0.06) 0%, rgba(196, 165, 123, 0.02) 50%, transparent 80%);
+      bottom: -15%;
+      right: 5%;
+      filter: blur(80px);
+      pointer-events: none;
+      animation: smoothGlowMoveAlternate 30s ease-in-out infinite alternate;
+      z-index: 1;
+    }
+    .about .container {
+      position: relative;
+      z-index: 2;
+    }
+    @keyframes smoothGlowMove {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(80px, 60px) scale(1.15);
+      }
+      100% {
+        transform: translate(-50px, -30px) scale(0.9);
+      }
+    }
+    @keyframes smoothGlowMoveAlternate {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(-90px, -40px) scale(0.9);
+      }
+      100% {
+        transform: translate(60px, 80px) scale(1.2);
+      }
+    }
   </style>
 </head>
 <body>
