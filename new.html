@@ -322,6 +322,17 @@
       }
       100% {
         transform: translate(60px, 80px) scale(1.2);
+    /* 2-Column Stats Grid */
+    .new-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      .new-stats-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -405,24 +416,16 @@
   <!-- STATS -->
   <section class="stats" id="stats">
     <div class="container">
-      <div class="stats-grid">
+      <div class="new-stats-grid">
         <div class="stat reveal">
           <div class="stat-number" data-count="20">0</div>
           <div class="stat-plus">+</div>
-          <div class="stat-label" data-i18n="stats.years">Years in IT Recruiting</div>
+          <div class="stat-label" data-i18n="new.stats.years">Years of Recruiting Experience</div>
         </div>
         <div class="stat reveal">
           <div class="stat-number" data-count="500">0</div>
           <div class="stat-plus">+</div>
           <div class="stat-label" data-i18n="stats.placements">Roles Successfully Filled</div>
-        </div>
-        <div class="stat reveal">
-          <div class="stat-number" data-count="1">0</div>
-          <div class="stat-label" data-i18n="new.stats.award">Healthcare Tech Excellence</div>
-        </div>
-        <div class="stat reveal">
-          <div class="stat-number" data-count="3">0</div>
-          <div class="stat-label" data-i18n="stats.partners">Strategic Partnerships</div>
         </div>
       </div>
     </div>
